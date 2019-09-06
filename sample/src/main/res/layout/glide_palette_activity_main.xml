@@ -4,19 +4,29 @@
     android:layout_height="match_parent"
     tools:context=".GlidePaletteMainActivity">
 
+    <FrameLayout
+        android:id="@+id/paletteBg"
+        android:layout_width="match_parent"
+        android:background="#B9B9B9"
+        android:layout_height="230dp" />
+
     <ImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
+        android:layout_margin="30dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         tools:ignore="ContentDescription" />
 
     <LinearLayout
+        android:id="@+id/paletteLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/image"
         android:layout_centerHorizontal="true"
-        android:layout_margin="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
         android:baselineAligned="false"
         android:gravity="center"
         android:orientation="horizontal">
@@ -85,5 +95,30 @@
                 android:text="Muted Light" />
         </LinearLayout>
     </LinearLayout>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/imageUrlInput"
+        android:hint="请输入图片url"
+        android:layout_below="@id/paletteLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/changeImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageUrlInput"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentRight="true"
+        android:text="切换新图片" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="随机切换"
+        android:layout_below="@id/imageUrlInput"
+        android:layout_marginTop="5dp"
+        android:id="@+id/randomChange" />
 
 </RelativeLayout>
